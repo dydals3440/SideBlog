@@ -1,10 +1,10 @@
-import { Hero } from '@/components';
-import Image from 'next/image';
+import { FeaturedPosts, Hero } from '@/components';
 
 export default function HomePage() {
   return (
     <>
       <Hero />
+      <FeaturedPosts />
     </>
   );
 }
