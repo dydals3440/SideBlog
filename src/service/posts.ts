@@ -10,6 +10,7 @@ export type Post = {
   featured: boolean;
 };
 
+// Post 배열의 데이터를 반환하는 Promise를 리턴.
 export async function getAllPosts(): Promise<Post[]> {
   const filePath = path.join(process.cwd(), 'data', 'posts.json');
   // .then((data) => JSON.parse(data)) data가 동일하므로 아래와 같이 생략가능
@@ -19,4 +20,9 @@ export async function getAllPosts(): Promise<Post[]> {
       // 최신 순 정렬
       .then((posts) => posts.sort((a, b) => (a.date > b.date ? -1 : 1)))
   );
+}
+
+export async function getFeaturedPosts(): Promise<Post[]> {
+  return getAllPosts() //
+    .then((posts) => posts.filter((post) => post.featured));
 }
