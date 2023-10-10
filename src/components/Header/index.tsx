@@ -2,11 +2,11 @@ import Link from 'next/link';
 
 const Header = () => {
   return (
-    <header>
+    <header className='flex justify-between items-center p-4'>
       <Link href='/'>
-        <h1>{'We DevLog'}</h1>
+        <h1 className='text-3xl font-bold'>{'We DevLog'}</h1>
       </Link>
-      <nav>
+      <nav className='flex gap-5'>
         <Link href='/'>Home</Link>
         <Link href='/about'>About</Link>
         <Link href='/posts'>Posts</Link>
