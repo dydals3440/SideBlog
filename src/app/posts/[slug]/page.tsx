@@ -1,3 +1,4 @@
+import { MarkdownViewer } from '@/components';
 import { getPostData } from '@/service/posts';
 
 type Props = {
@@ -13,7 +14,7 @@ const PostPage = async ({ params: { slug } }: Props) => {
   return (
     <>
       <h1>{post.title}</h1>
-      <pre>{post.content}</pre>
+      <MarkdownViewer content={post.content} />
     </>
   );
 };
