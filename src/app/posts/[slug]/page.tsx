@@ -1,5 +1,6 @@
 import { AdjacentPostCard, PostContent } from '@/components';
 import { getPostData } from '@/service/posts';
+import { Metadata } from 'next';
 import Image from 'next/image';
 
 type Props = {
@@ -7,6 +8,16 @@ type Props = {
     slug: string;
   };
 };
+
+export async function generateMetadata({
+  params: { slug },
+}: Props): Promise<Metadata> {
+  const { title, description } = await getPostData(slug);
+  return {
+    title,
+    description,
+  };
+}
 
 const PostPage = async ({ params: { slug } }: Props) => {
   const post = await getPostData(slug);

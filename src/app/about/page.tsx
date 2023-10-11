@@ -1,4 +1,10 @@
 import { Hero } from '@/components';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: '서비스 소개',
+  description: '서비스 소개',
+};
 
 const TITLE_CLASS = 'text-3xl font-bold text-gray-800 my-2';
 const MEMBER_CLASS = 'text-2xl text-gray-800';
