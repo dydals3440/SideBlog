@@ -11,3 +11,5 @@ export { default as Categories } from './Categories/index';
 export { default as MarkdownViewer } from './MarkdownViewer/index';
 export { default as PostContent } from './PostContent/index';
 export { default as AdjacentPostCard } from './AdjacentPostCard';
+export { default as ContactForm } from './ContactForm/index';
+export { default as Banner } from './Banner/index';
