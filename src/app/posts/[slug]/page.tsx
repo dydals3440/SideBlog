@@ -1,4 +1,4 @@
-import { PostContent } from '@/components';
+import { AdjacentPostCard, PostContent } from '@/components';
 import { getPostData } from '@/service/posts';
 import Image from 'next/image';
 
@@ -23,9 +23,9 @@ const PostPage = async ({ params: { slug } }: Props) => {
       />
       <PostContent post={post} />
       {/* Prev / Next Post */}
-      <section>
-        {next && <p>{next.title}</p>}
-        {prev && <p>{prev.title}</p>}
+      <section className='flex shadow-md'>
+        {prev && <AdjacentPostCard post={prev} type={'prev'} />}
+        {next && <AdjacentPostCard post={next} type={'next'} />}
       </section>
     </article>
   );
