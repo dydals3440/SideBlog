@@ -10,7 +10,7 @@ type Props = {
 
 const PostPage = async ({ params: { slug } }: Props) => {
   const post = await getPostData(slug);
-  const { title, path } = post;
+  const { title, path, next, prev } = post;
 
   return (
     <article className='rounded-2xl overflow-hidden bg-gray-100 shadow-lg m-4 '>
@@ -23,6 +23,10 @@ const PostPage = async ({ params: { slug } }: Props) => {
       />
       <PostContent post={post} />
       {/* Prev / Next Post */}
+      <section>
+        {next && <p>{next.title}</p>}
+        {prev && <p>{prev.title}</p>}
+      </section>
     </article>
   );
 };
