@@ -9,3 +9,4 @@ export { default as MultiCarousel } from './CarouselPosts/MultiCarousel/index';
 export { default as FilterablePosts } from './FilterablePosts/index';
 export { default as Categories } from './Categories/index';
 export { default as MarkdownViewer } from './MarkdownViewer/index';
+export { default as PostContent } from './PostContent/index';
