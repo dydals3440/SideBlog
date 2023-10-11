@@ -4,6 +4,7 @@ import { cache } from 'react';
 
 export type Post = {
   title: string;
+  author: string;
   description: string;
   date: Date;
   category: string;

@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const Hero = () => {
   return (
-    <section className='text-center'>
+    <section className='text-center dark:text-gray-300'>
       <Image
         className='mx-auto rounded-full'
         src={TeamLogo}
@@ -19,7 +19,7 @@ const Hero = () => {
         개발자/기획자/디자이너를 희망하는 사람들과 함께 진행하는 프로젝트입니다.
       </p>
       <Link href='/contact'>
-        <button className='bg-blue-300 font-bold rounded-xl py-1 px-4 mt-3'>
+        <button className='bg-blue-300 font-bold rounded-xl py-1 px-4 mt-3 dark:bg-black'>
           Contact Me
         </button>
       </Link>
