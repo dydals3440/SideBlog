@@ -21,7 +21,7 @@ const Header = () => {
     if (localStorage.getItem('theme') === 'dark') {
       document.documentElement.classList.add('dark');
     }
-  }, []);
+  }, [darkMode]);
   return (
     <header className='flex justify-between items-center p-4 mb-10 dark:text-gray-300 dark:bg-gray-700 '>
       <Link href='/'>
